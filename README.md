@@ -5,7 +5,7 @@ how does git work?
 create a new file
 git add it
  - hashes the file contents 
- - stores it in .git/objects/<ab>/<cde..xyz> (where <ab> is the first 2 letters of hash and <cde..xyz> is the rest of the hash)
+ - stores it in .git/objects/\<ab\>/\<cde..xyz\> (where \<ab\> is the first 2 letters of hash and <cde..xyz> is the rest of the hash)
  - stores it in the .git/index with "filename\thash"
 
 git stores directories:
@@ -26,8 +26,8 @@ git stores branches as:
 HEAD?!?:
  - git stores a reference to what you are currently looking at
  - stored as a .git/HEAD file.
- - the contents are 'ref: .git/refs/heads/<branchname>'
- - OR '<hashofcommit>' (in detached mode)
+ - the contents are 'ref: .git/refs/heads/\<branchname\>'
+ - OR '\<hashofcommit\>' (in detached mode)
  - it is effectively a pointer to a pointer
 
 Optimize storage with: diffs, and compression
