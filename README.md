@@ -7,6 +7,7 @@ git add it
  - hashes the file contents 
  - stores it in .git/objects/\<ab\>/\<cde..xyz\> (where \<ab\> is the first 2 letters of hash and <cde..xyz> is the rest of the hash)
  - stores it in the .git/index with "filename\thash"
+ - if you stage changes to a file that has already been staged, git will look in the index to see if the file has been staged already. If so, it replaces the hash associated with the file.
 
 git stores directories:
  - list of type\tname\thash\n
